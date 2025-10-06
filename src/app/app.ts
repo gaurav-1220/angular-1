@@ -1,12 +1,38 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CounterComponent } from './counter/counter';
+import { ParagraphTogglerComponent } from './paragraph/paragraph';
+import { TodoListComponent } from './todo-list/todo-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    CommonModule,
+    CounterComponent,
+    ParagraphTogglerComponent,
+    TodoListComponent
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.scss']
 })
-export class App {
-  protected readonly title = signal('project-2');
+export class AppComponent {
+  title = 'Project-2';
+  showScrollButton = false;
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Show button
+    if (window.pageYOffset > 100) {
+      this.showScrollButton = true;
+    } else {
+      this.showScrollButton = false;
+    }
+  }
+
+  // smooth scroll
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

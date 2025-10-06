@@ -1,0 +1,16 @@
+<h2>Paragraph Toggler</h2>
+
+<div class="toggle-control">
+  <input type="checkbox" id="visibility-toggle" (change)="toggleVisibility()" [checked]="isVisible">
+  <label for="visibility-toggle">Show Paragraph</label>
+</div>
+
+
+<div *ngIf="isVisible" class="paragraph-container">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac erat ante. Aliquam et iaculis sem. Curabitur a feugiat mauris, ut malesuada lorem.
+  </p>
+  <p>
+    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+  </p>
+</div>

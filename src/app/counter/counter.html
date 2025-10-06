@@ -1,0 +1,16 @@
+<h2>Counter</h2>
+
+<div class="counter-card">
+  
+  <div class="counter-controls">
+    <button (click)="decrement()" class="control-btn">-</button>
+    <div class="count-display">
+      {{ count }}
+    </div>
+    <button (click)="increment()" class="control-btn">+</button>
+  </div>
+
+  <div class="reset-container">
+    <button (click)="reset()" class="reset-btn">Reset</button>
+  </div>
+</div>

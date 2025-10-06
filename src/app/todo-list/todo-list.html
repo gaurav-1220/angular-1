@@ -1,0 +1,21 @@
+<h2>To-Do List</h2>
+
+<div class="todo-add-form">
+  <input type="text" [(ngModel)]="newTodo" placeholder="Add a new to-do" (keyup.enter)="addTodo()">
+  <button (click)="addTodo()">Add</button>
+</div>
+
+<ul>
+  <li *ngFor="let todo of todos">
+    
+    <div class="todo-info">
+      <span class="todo-emoji">🌸</span>
+      <span class="todo-title">{{ todo.title }}</span>
+    </div>
+        <span class="todo-date">
+          Added on: {{ todo.created_at | date:'dd MMM yyyy' }}
+        </span>
+
+    <button (click)="deleteTodo(todo.id)" class="delete-btn">Delete</button>
+  </li>
+</ul>

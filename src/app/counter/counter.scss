@@ -1,0 +1,54 @@
+@use '../../styles.scss' as *;
+
+.counter-card {
+  max-width: 550px; // card
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.counter-controls {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 30px; 
+}
+
+// number
+.count-display {
+  font-size: 6rem;
+  font-weight: 700;
+  color: $dark-blue;
+  margin: 0 40px; 
+}
+
+// + and - 
+.control-btn {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+
+.reset-container {
+  text-align: center;
+}
+
+// reset btn
+.reset-btn {
+  background-color: $orange;
+  font-weight: 600;
+  padding: 10px 40px;
+
+  &:hover {
+    background-color: $yellow;
+    color: $dark-blue;
+  }
+}
