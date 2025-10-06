@@ -1,22 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
-/* src/styles.scss */
-
-// 1. Define your color palette as SCSS variables
 $sky-blue: #8ecae6;
 $blue-green: #219ebc;
 $dark-blue: #023047;
 $orange: #fb8500;
 $yellow: #ffb703;
 
-// 2. Set global styles for the whole application
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: #f4f7f9; // A light grey for the background
+  background-color: #f4f7f9; 
   color: $dark-blue;
 }
 
-// 3. Style the main headings
 h1, h2 {
   font-weight: 600;
   color: $dark-blue;
@@ -24,7 +19,7 @@ h1, h2 {
   padding-bottom: 10px;
 }
 
-// 4. Style the horizontal rule to look cleaner
+
 hr {
   border: none;
   height: 1px;
@@ -32,7 +27,7 @@ hr {
   margin: 40px 0;
 }
 
-// 5. Basic button styling to be used across the app
+
 button {
   cursor: pointer;
   padding: 10px 15px;
